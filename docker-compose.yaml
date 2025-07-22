@@ -1,0 +1,11 @@
+services:
+  gpu-test:
+    image: waikatodatamining/gpu-test:cuda12.2.2
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia
+    command: nvidia-smi
+
