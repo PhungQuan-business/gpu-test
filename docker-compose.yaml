@@ -7,5 +7,7 @@ services:
           devices:
             - capabilities: [gpu]
     runtime: nvidia
-    command: nvidia-smi
+    stdin_open: true
+    tty: true
+    command: tail -f /dev/null
 
